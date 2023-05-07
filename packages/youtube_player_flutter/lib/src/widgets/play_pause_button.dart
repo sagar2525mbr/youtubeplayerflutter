@@ -82,7 +82,7 @@ class _PlayPauseButtonState extends State<PlayPauseButton>
         child: Material(
           color: Colors.transparent,
           child: InkWell(
-            borderRadius: BorderRadius.circular(50.0),
+            borderRadius: BorderRadius.circular(35.0),
             onTap: () => _controller.value.isPlaying
                 ? _controller.pause()
                 : _controller.play(),
@@ -90,7 +90,7 @@ class _PlayPauseButtonState extends State<PlayPauseButton>
               icon: AnimatedIcons.play_pause,
               progress: _animController.view,
               color: Colors.white,
-              size: 60.0,
+              size: 30.0,
             ),
           ),
         ),
@@ -99,8 +99,8 @@ class _PlayPauseButtonState extends State<PlayPauseButton>
     if (_controller.value.hasError) return const SizedBox();
     return widget.bufferIndicator ??
         Container(
-          width: 70.0,
-          height: 70.0,
+          width: 35.0,
+          height: 35.0,
           child: const CircularProgressIndicator(
             valueColor: AlwaysStoppedAnimation(Colors.white),
           ),
